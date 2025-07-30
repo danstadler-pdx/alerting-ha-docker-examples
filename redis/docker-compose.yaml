@@ -45,6 +45,7 @@ services:
       - GF_DATABASE_USER=${GF_DATABASE_USER}
       - GF_DATABASE_PASSWORD=${GF_DATABASE_PASSWORD}
       - GF_DATABASE_SSL_MODE=disable
+      - GF_DATABASE_MIGRATION_LOCKING=false
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
   grafana-node-2:
@@ -66,6 +67,7 @@ services:
       - GF_DATABASE_USER=${GF_DATABASE_USER}
       - GF_DATABASE_PASSWORD=${GF_DATABASE_PASSWORD}
       - GF_DATABASE_SSL_MODE=disable
+      - GF_DATABASE_MIGRATION_LOCKING=false
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
   nginx:
